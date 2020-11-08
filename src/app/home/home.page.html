@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <div class="toolbar-logo">
+        <ion-img src="assets/icon.png"></ion-img>
+      </div>
+      <!-- <ion-button (click)="openMenu()">
+        <ion-icon name="menu"></ion-icon
+      ></ion-button> -->
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-title *ngIf="fileName">
+        <ion-icon name="document-outline"></ion-icon>
+        {{fileName}}
+      </ion-title>
+      <ion-button (click)="doRefresh()">
+        <ion-icon name="refresh"></ion-icon
+      ></ion-button>
+      <div class="autoplay">
+        <ion-label>Autoplay</ion-label>
+        <ion-icon
+          class="true"
+          name="checkmark-circle-outline"
+          *ngIf="sliderAutoPlay"
+        ></ion-icon>
+        <ion-icon
+          class="false"
+          name="radio-button-on-outline"
+          *ngIf="!sliderAutoPlay"
+        ></ion-icon>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="home-content" [fullscreen]="true">
+  <div class="spinner">
+    <ion-spinner name="dots" color="primary" *ngIf="isLoading"></ion-spinner>
+  </div>
+  <ion-slides
+    #slides
+    pager="true"
+    [options]="slideOpts"
+    (ionSlideDoubleTap)="onDoubleTap()"
+    (ionSlideDidChange)="slideInit()"
+  >
+    <ion-slide *ngFor="let slideItem of sliderList">
+      <ion-card>
+        <pinch-zoom>
+          <canvas [id]="slideItem.id"></canvas>
+        </pinch-zoom>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

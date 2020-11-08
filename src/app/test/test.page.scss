@@ -1,0 +1,13 @@
+ion-menu-button {
+  color: var(--ion-color-primary);
+}
+
+.home-content {
+  ion-card {
+    height: calc(100% - 20px);
+    overflow: auto;
+    pinch-zoom {
+      height: 100vh;
+    }
+  }
+}

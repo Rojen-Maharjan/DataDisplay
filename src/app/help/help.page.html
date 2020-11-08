@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title
+      ><ion-icon name="help-circle-outline"></ion-icon> Help
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button class="back" (click)="goBack()">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        <ion-label>back</ion-label>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="logo">
+    <ion-img src="assets/icon.png"></ion-img>
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>How To </ion-card-subtitle>
+      <ion-card-title>Features</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      1. Double-Tap to stop/resume auto play <br />
+      2. Pinch-To-Zoom to zoom into detail <br />
+      3. Reload files from refresh button
+    </ion-card-content>
+  </ion-card>
+  <div class="help">
+    <ion-img class="portrait" src="assets/help.jpg"></ion-img>
+    <ion-img class="landscape" src="assets/help1.jpg"></ion-img>
+  </div>
+</ion-content>

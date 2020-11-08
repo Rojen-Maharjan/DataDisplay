@@ -1,0 +1,26 @@
+.logo {
+  padding: 4px 10px;
+  display: flex;
+  justify-content: flex-start;
+  ion-img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.help {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  ion-img {
+    margin: 10px;
+  }
+  ion-img.portrait {
+    height: 280px;
+  }
+  ion-img.landscape {
+    margin: auto;
+    width: 280px;
+  }
+}

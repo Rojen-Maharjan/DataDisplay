@@ -1,0 +1,27 @@
+ion-menu ion-content {
+  // --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  --background: var(--ion-color-primary);
+}
+ion-list {
+  background: none;
+  * {
+    color: #ffffff;
+  }
+}
+
+ion-item {
+  background: none;
+  --background: none;
+  font-size: 23px;
+  font-weight: 600;
+  padding: 6px 12px;
+  &.setting {
+    font-size: 17px;
+  }
+}
+.menu-logo {
+  height: 30px;
+  width: 30px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+}

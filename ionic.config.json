@@ -1,0 +1,7 @@
+{
+  "name": "Thesis Chart",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
