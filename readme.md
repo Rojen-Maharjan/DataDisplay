@@ -9,9 +9,9 @@ setup environment for development
 ### RUN
 ```bash
 git clone <repo-link>
-`npm install`
-`ionic resources`
-`ionic cordova platform add android`
+npm install
+ionic resources
+ionic cordova platform add android
 ```
 
 ### Development
