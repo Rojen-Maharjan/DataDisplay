@@ -20,4 +20,4 @@ import { IonicModule, IonicRouteStrategy } from "@ionic/angular";
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

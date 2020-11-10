@@ -1,0 +1,27 @@
+.fix-title {
+    max-width: 250px;
+    overflow-y: auto;
+    font-size: 14px;
+}
+
+.chart-item-dot-wrapper {
+    display: flex;
+    justify-content: center;
+    overflow-x: auto;
+    margin: 0 70px;
+    border-radius: 50%;
+
+    .chart-item-dot {
+        --background: none;
+        --box-shadow: none;
+        --padding-start: 4px;
+        --padding-end: 4px;
+        --padding-top: 4px;
+        --padding-bottom: 4px;
+
+        ion-icon {
+            height: 12px;
+            color: var(--ion-color-primary);
+        }
+    }
+}

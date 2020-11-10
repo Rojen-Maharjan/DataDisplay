@@ -79,7 +79,7 @@ async function sign(env) {
 // zip-align for android
 async function align(env) {
   //EDIT HERE : SDK PATH
-  let $ANDROID_HOME = 'C:/Users/bijma/AppData/Local/Android/Sdk';
+  let $ANDROID_HOME = 'C:/Users/Public/Android';
   console.log('Finding build-tool version...');
   const buildToolVersionString = execSync('ls ' + $ANDROID_HOME + '/build-tools/', {
     encoding: 'utf8',
@@ -90,7 +90,7 @@ async function align(env) {
     console.error("Could not find android sdk :'(");
   }
   // EDIT HERE : buildToolVersion
-  const buildToolVersionToUse = '30.0.0';
+  const buildToolVersionToUse = '30.0.2';
   
   console.log(`Using android sdk version ${buildToolVersionToUse}...`);
   const androidHomePath = execSync('echo ' + $ANDROID_HOME, {

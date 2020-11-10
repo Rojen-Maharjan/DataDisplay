@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <div class="toolbar-logo">
+        <ion-img src="assets/icon.png"></ion-img>
+      </div>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-title class="fix-title" *ngIf="fileName">
+        <ion-icon name="document-outline"></ion-icon>
+        {{fileName}}
+      </ion-title>
+      <ion-button (click)="doRefresh()">
+        <ion-icon name="refresh"></ion-icon>
+      </ion-button>
+      <div class="autoplay" (click)="sliderToggle()">
+        <ion-label>Autoplay</ion-label>
+        <ion-icon class="true" name="checkmark-circle-outline" *ngIf="sliderAutoPlay"></ion-icon>
+        <ion-icon class="false" name="radio-button-on-outline" *ngIf="!sliderAutoPlay"></ion-icon>
+      </div>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="home-content" [fullscreen]="true">
+  <div class="spinner">
+    <ion-spinner name="dots" color="primary" *ngIf="isLoading"></ion-spinner>
+  </div>
+
+  <ion-card>
+    <pinch-zoom>
+      <canvas #context></canvas>
+    </pinch-zoom>
+  </ion-card>
+
+  <div class="chart-item-dot-wrapper">
+
+    <span *ngFor="let item of chartDataList;let i = index">
+      <ion-button class="chart-item-dot" size="small" (click)="switchSlider(i)">
+        <ion-icon name="radio-button-off-outline" *ngIf="i !== currentChartIndex"></ion-icon>
+        <ion-icon name="radio-button-on-outline" *ngIf="i === currentChartIndex"></ion-icon>
+      </ion-button>
+    </span>
+  </div>
+</ion-content>
