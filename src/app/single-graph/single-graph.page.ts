@@ -19,7 +19,7 @@ export class SingleGraphPage implements OnInit {
   isLoading = false;
   chartDataList = [];
   sliderAutoPlay = true;
-  currentChartIndex: number;
+  currentChartIndex = 0;
   sliderIntervalSubscription;
 
   constructor(
@@ -67,7 +67,6 @@ export class SingleGraphPage implements OnInit {
                     );
                     this.chartDataList.push(chartParsedData);
                     if (this.chartDataList.length === 1) {
-                      this.currentChartIndex = 0;
                       this.setChartContextByIndex(0);
                       this.slideChartData();
                     }
@@ -198,8 +197,12 @@ export class SingleGraphPage implements OnInit {
     if (this.isLoading) {
       return;
     }
+    if (this.sliderIntervalSubscription) {
+      this.sliderIntervalSubscription.unsubscribe();
+    }
     this.fileName = "";
     this.chartDataList = [];
+    this.currentChartIndex = 0;
     this.sliderAutoPlay = true;
     this.loadFolder();
   }
