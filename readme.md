@@ -19,6 +19,6 @@ Running application
 - run `ionic cordova run android` for running application on dev env
 - run `ionic cordova run android -l` for live reload development on dev env
 
-### BUild
+### Build
 - update gulpfile.js with (EDIT HERE :) for sdk path and build tool version
 - run `gulp dev-android` with your build config to output required apk build

@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: "",
-    redirectTo: "home",
+    redirectTo: "single-graph",
     pathMatch: "full",
   },
   {
@@ -21,9 +21,14 @@ const routes: Routes = [
     path: "setting",
     loadChildren: () =>
       import("./setting/setting.module").then((m) => m.SettingPageModule),
-  },  {
+  },
+  {
     path: 'help',
     loadChildren: () => import('./help/help.module').then( m => m.HelpPageModule)
+  },
+  {
+    path: 'single-graph',
+    loadChildren: () => import('./single-graph/single-graph.module').then( m => m.SingleGraphPageModule)
   },
 
 ];
