@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <div class="toolbar-logo">
-        <ion-img src="assets/icon.png"></ion-img>
-      </div>
+      <ion-button (click)="openMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-title class="fix-title" *ngIf="fileName">

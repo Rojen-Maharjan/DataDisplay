@@ -2,8 +2,10 @@ ion-menu ion-content {
   // --background: var(--ion-item-background, var(--ion-background-color, #fff));
   --background: var(--ion-color-primary);
 }
+
 ion-list {
   background: none;
+
   * {
     color: #ffffff;
   }
@@ -12,13 +14,24 @@ ion-list {
 ion-item {
   background: none;
   --background: none;
-  font-size: 23px;
+  font-size: 18px;
   font-weight: 600;
   padding: 6px 12px;
-  &.setting {
-    font-size: 17px;
+}
+
+.menu-list {
+  ion-item {
+    justify-content: flex-end;
+    font-size: 16px;
+    font-weight: normal;
+
+    ion-icon {
+      font-size: 16px;
+      padding-right: 4px;
+    }
   }
 }
+
 .menu-logo {
   height: 30px;
   width: 30px;

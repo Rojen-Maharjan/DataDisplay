@@ -1,24 +1,30 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <!-- <ion-menu contentId="main-content" type="overlay">
+    <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list>
-          <ion-item (click)="gotoHome()">
+          <ion-item (click)="navigateWithPath('single-graph')">
             <ion-img class="menu-logo" src="assets/icon.png"></ion-img>
-            &nbsp;Data Display</ion-item
-          >
+            &nbsp;Data Display
+          </ion-item>
         </ion-list>
 
-        <ion-list lines="none">
-          <ion-item class="setting" (click)="gotoSetting()">
+        <ion-list class="menu-list">
+          <ion-item (click)="navigateWithPath('single-graph')">
+            <ion-icon name="bar-chart-outline"></ion-icon>Autoplay Excel
+          </ion-item>
+          <ion-item (click)="navigateWithPath('plot')">
+            <ion-icon name="analytics-outline"></ion-icon>Plot Graph
+          </ion-item>
+          <!-- <ion-item class="setting" (click)="navigateWithPath('setting')">
             <ion-icon name="settings-outline"></ion-icon> &nbsp;Settings
-          </ion-item>
-          <ion-item class="setting" (click)="gotoHelp()">
+          </ion-item> -->
+          <!-- <ion-item class="setting" (click)="navigateWithPath('help')">
             <ion-icon name="help-circle-outline"></ion-icon>&nbsp;Help
-          </ion-item>
+          </ion-item> -->
         </ion-list>
       </ion-content>
-    </ion-menu> -->
+    </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
 </ion-app>

@@ -2,6 +2,7 @@ import * as XLSX from "xlsx";
 import { interval } from 'rxjs';
 import { Chart } from "chart.js";
 import { File } from "@ionic-native/file/ngx";
+import { MenuController } from '@ionic/angular';
 import { SettingService } from "../services/setting.service";
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 
@@ -12,7 +13,6 @@ import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
 })
 export class SingleGraphPage implements OnInit {
   @ViewChild("context") context: ElementRef;
-  @ViewChild('doubleTapArea') doubleTapArea: ElementRef;
 
   fileName = "";
   sliderListId = 0;
@@ -25,6 +25,7 @@ export class SingleGraphPage implements OnInit {
   constructor(
     private file: File,
     public ss: SettingService,
+    private menu: MenuController
   ) { }
 
   ngOnInit() { }
@@ -219,6 +220,10 @@ export class SingleGraphPage implements OnInit {
   switchSlider(index) {
     this.setChartContextByIndex(index);
     this.currentChartIndex = index;
+  }
+
+  openMenu() {
+    this.menu.open();
   }
 }
 
