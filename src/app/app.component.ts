@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   createFolderIfNotExist() {
     this.file
@@ -57,18 +57,9 @@ export class AppComponent implements OnInit {
       });
   }
 
-  gotoHome() {
+  navigateWithPath(navPath) {
     this.menu.close();
-    this.nav.navigateRoot("home");
+    this.nav.navigateRoot(navPath);
   }
 
-  gotoSetting() {
-    this.menu.close();
-    this.nav.navigateRoot("setting");
-  }
-
-  gotoHelp() {
-    this.menu.close();
-    this.nav.navigateRoot("help");
-  }
 }

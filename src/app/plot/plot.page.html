@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="openMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+      <ion-title>
+        Plot Graph
+      </ion-title>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onReset()">
+        <ion-icon name="refresh"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="home-content" [fullscreen]="true">
+  <ion-card>
+    <pinch-zoom>
+      <canvas #context></canvas>
+    </pinch-zoom>
+  </ion-card>
+  <div class="plot-input-block">
+    <ion-item>
+      <ion-label color="primary" position="stacked">x-label</ion-label>
+      <ion-input type="text" placeholder="label" [(ngModel)]="x"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label color="primary" position="stacked">y-value</ion-label>
+      <ion-input type="number" placeholder="value" [(ngModel)]="y"></ion-input>
+    </ion-item>
+    <ion-item class="plot-button">
+      <ion-button size="default" (click)="onPlotAction()">Plot</ion-button>
+    </ion-item>
+  </div>
+</ion-content>
