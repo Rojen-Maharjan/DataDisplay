@@ -2,14 +2,14 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
-        <ion-list>
+        <ion-list lines="none">
           <ion-item (click)="navigateWithPath('single-graph')">
             <ion-img class="menu-logo" src="assets/icon.png"></ion-img>
             &nbsp;Data Display
           </ion-item>
         </ion-list>
 
-        <ion-list class="menu-list">
+        <ion-list class="menu-list" lines="none">
           <ion-item (click)="navigateWithPath('single-graph')">
             <ion-icon name="bar-chart-outline"></ion-icon>Autoplay Excel
           </ion-item>

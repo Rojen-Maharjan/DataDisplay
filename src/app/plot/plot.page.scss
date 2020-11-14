@@ -6,7 +6,9 @@ ion-card {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 10px 16px 10px 32px;
+    padding: 4px 4px 10px 16px;
+    margin: 4px 10px 0;
+    background: #ffffff;
     height: auto;
     align-items: center;
 
@@ -20,6 +22,11 @@ ion-card {
 
         ion-label {
             font-size: 20px;
+        }
+
+        ion-input {
+            color: #121212;
+            --placeholder-opacity: 0.2;
         }
     }
 }
