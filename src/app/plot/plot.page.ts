@@ -54,7 +54,7 @@ export class PlotPage implements OnInit {
             {
               scaleLabel: {
                 display: true,
-                labelString: "capacitor",
+                labelString: "pressure",
               },
               ticks: {
                 beginAtZero: true,
@@ -67,7 +67,7 @@ export class PlotPage implements OnInit {
         labels: xData,
         datasets: [
           {
-            label: "pressure",
+            label: "capacitor",
             fill: false,
             lineTension: 0.1,
             backgroundColor: "rgba(75,192,192,0.4)",
